@@ -1,0 +1,12 @@
+1-> Analisar o projeto que tem que ser feito para entender por onde começar e sua complexidade
+2-> Decidir a estrutura de pastas que terão no projeto
+3-> Baixaria arquivos do projeto
+4-> iniciaria o html estrutura base
+5-> faria css
+6-> java script que é as interações e dinâmicas 
+
+7-> revisão responsividade desk e mobile 
+8-> revisão de padrões de scripts
+	meta dados do html (idioma) 
+	durante o código -> focaria em padfrões d enomeclaturas de classes, variáveis, divs etc
+	Padrão d e comentários 

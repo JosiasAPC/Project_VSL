@@ -1,0 +1,133 @@
+/*-------------------------------------------------- BODY CSS*/
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #343a40;
+  max-width: 100vw;
+}
+
+/*-------------------------------------------------- HEADER CSS*/
+
+header {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #343a40;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header img {
+  width: 400px;
+  max-width: 90vw;
+  height: auto;
+}
+
+/*-------------------------------------------------- MAIN CSS */
+
+/* --- Estrutura base --- */
+.section {
+  padding: 20px 10px;
+}
+
+/* --- Container --- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Row & Columns --- */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.col {
+  flex: 1;
+}
+
+.col--50 {
+  flex: 0 0 50%;
+}
+
+/*-------------------------------------------------- SECTION VIDEO CSS */
+
+.section--video {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.imgInstitutes {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+.txtIsntitutes {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #333;
+}
+
+.txtIsntitutes::before,
+.txtIsntitutes::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #333;
+}
+
+.txtIsntitutes::before {
+  margin-right: 10px;
+}
+.txtIsntitutes::after {
+  margin-left: 10px;
+}
+
+.txtIsntitutos {
+  background-color: aqua;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.txt-txtIns2 {
+  color: black;
+}
+.txt {
+  font-size: medium;
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/* --- Botão --- */
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+  border-radius: 13px 13px 13px 13px;
+  letter-spacing: 6.8px;
+}
+
+.button--primary {
+  font-size: 2.4em;
+  background-color: #003153;
+  font-family: "Montserrat", Sans-serif;
+  font-weight: 700;
+  fill: #f8f8f8;
+  color: #f8f8f8;
+  box-shadow: 6px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
