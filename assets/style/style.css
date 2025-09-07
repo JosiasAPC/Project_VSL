@@ -272,3 +272,26 @@ header img {
 }
 
 /*-------------------------------------------------- END REFERENCES CSS */
+
+/*-------------------------------------------------- FOOTER CSS */
+
+footer {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.8em;
+  color: #6c757d;
+  line-height: 20px;
+}
+footer p {
+  margin: 5px 0;
+}
+footer .disclaimer {
+  font-size: 0.9em;
+  color: #555555;
+  line-height: 22px;
+  max-width: 800px;
+  margin: 0 auto 10px auto;
+}
+
+/*-------------------------------------------------- END FOOTER CSS */

@@ -1,14 +1,3 @@
-/*---------------------- SCRIPT VÍDEO VSL*/
-
-// external script loading
-var s = document.createElement("script");
-s.src =
-  "https://scripts.converteai.net/81e69584-9233-418d-b404-8d6836f543eb/players/68951d3a852ea9821ad4af28/v4/player.js";
-s.async = true;
-document.head.appendChild(s);
-
-/*---------------------- END SCRIPT VIDEO VSL*/
-
 /*---------------------- SCRIPT RANDOM NUMBER AND ELAPSED TIME*/
 // Initial values
 let currentNumber = 7.238;
