@@ -1,15 +1,21 @@
-let currentNumber = 7.238;
-let minutesElapsed = 15;
-let currentDirection = Math.random() > 0.5 ? 1 : -1;
+/*---------------------- SCRIPT VÍDEO VSL*/
 
-// carregamento do script externo
+// external script loading
 var s = document.createElement("script");
 s.src =
   "https://scripts.converteai.net/81e69584-9233-418d-b404-8d6836f543eb/players/68951d3a852ea9821ad4af28/v4/player.js";
 s.async = true;
 document.head.appendChild(s);
 
-// Função para atualizar o número aleatório
+/*---------------------- END SCRIPT VIDEO VSL*/
+
+/*---------------------- SCRIPT RANDOM NUMBER AND ELAPSED TIME*/
+// Initial values
+let currentNumber = 7.238;
+let minutesElapsed = 15;
+let currentDirection = Math.random() > 0.5 ? 1 : -1;
+
+// Function to update the random number
 function updateNumber() {
   const step = Math.random() * 0.2 + 0.1; // Small random step
   currentNumber += step * currentDirection;
@@ -44,3 +50,28 @@ function startUpdating() {
 }
 
 window.onload = startUpdating;
+/*---------------------- END SCRIPT RANDOM NUMBER AND ELAPSED TIME*/
+
+/*---------------------- SCRIPT BACK TO TOP BUTTON*/
+
+// Get button
+const btnTop = document.getElementById("btnTop");
+
+// Show button when scrolling
+window.onscroll = function () {
+  if (
+    document.body.scrollTop > 200 ||
+    document.documentElement.scrollTop > 200
+  ) {
+    btnTop.style.display = "block";
+  } else {
+    btnTop.style.display = "none";
+  }
+};
+
+// Function to return to top
+btnTop.addEventListener("click", function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+/*---------------------- END SCRIPT BACK TO TOP BUTTON*/
