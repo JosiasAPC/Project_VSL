@@ -1,0 +1,46 @@
+let currentNumber = 7.238;
+let minutesElapsed = 15;
+let currentDirection = Math.random() > 0.5 ? 1 : -1;
+
+// carregamento do script externo
+var s = document.createElement("script");
+s.src =
+  "https://scripts.converteai.net/81e69584-9233-418d-b404-8d6836f543eb/players/68951d3a852ea9821ad4af28/v4/player.js";
+s.async = true;
+document.head.appendChild(s);
+
+// Função para atualizar o número aleatório
+function updateNumber() {
+  const step = Math.random() * 0.2 + 0.1; // Small random step
+  currentNumber += step * currentDirection;
+
+  if (currentNumber >= 8.891 || currentNumber <= 7.123) {
+    currentDirection *= -1; // Reverse direction when hitting bounds
+  }
+
+  document.getElementById("randomNumber").textContent =
+    currentNumber.toFixed(3);
+}
+
+function updateTime() {
+  minutesElapsed++;
+
+  let timeString;
+  if (minutesElapsed < 60) {
+    timeString = `${minutesElapsed} minutes ago`;
+  } else {
+    const hours = Math.floor(minutesElapsed / 60);
+    timeString = hours === 1 ? `1 hour ago` : `${hours} hours ago`;
+  }
+
+  document.getElementById(
+    "timeElapsed"
+  ).textContent = `Started streaming ${timeString}`;
+}
+
+function startUpdating() {
+  setInterval(updateNumber, 3000); // Update number every 3 seconds
+  setInterval(updateTime, 60000); // Update time every minute
+}
+
+window.onload = startUpdating;

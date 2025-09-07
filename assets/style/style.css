@@ -64,6 +64,12 @@ header img {
   text-align: center;
 }
 
+.vuturb-smartplayer {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .imgInstitutes {
   width: 100%;
   max-width: 600px;
@@ -110,24 +116,89 @@ header img {
   }
 }
 
-/* --- Botão --- */
-.button {
-  display: inline-block;
-  padding: 12px 24px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
-  border-radius: 13px 13px 13px 13px;
-  letter-spacing: 6.8px;
+/*-------------------------------------------------- SECTION REFERENCES CSS */
+
+.section--references {
+  text-align: center;
 }
 
-.button--primary {
-  font-size: 2.4em;
-  background-color: #003153;
-  font-family: "Montserrat", Sans-serif;
-  font-weight: 700;
-  fill: #f8f8f8;
-  color: #f8f8f8;
-  box-shadow: 6px 0px 10px 0px rgba(0, 0, 0, 0.5);
+.row--references {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.col--tittle-references {
+  justify-items: center;
+}
+
+.title {
+  background-color: #44706a;
+  color: #ffffff;
+  font-size: 2em;
+  margin-bottom: 20px;
+  max-width: 50vw;
+  border-radius: 30px;
+  padding: 20px 20px;
+}
+
+.col--list-references {
+  text-align: left;
+  padding: 10px;
+}
+
+.col--list-references li {
+  word-break: break-word;
+  font-family: Roboto, sans-serif;
+  line-height: 40px;
+}
+
+.references-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.references-list li {
+  counter-increment: item;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  color: #777676;
+}
+
+.references-list--primary {
+  counter-reset: item;
+}
+
+.references-list--secondary {
+  counter-reset: item 6;
+}
+
+.references-list li::before {
+  content: counter(item) ".";
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 0.3em;
+}
+
+/* Responsiv */
+@media (max-width: 768px) {
+  .col--list-references {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  .col--list-references li {
+    font-size: 0.8em;
+  }
+  .li--primary {
+    margin-top: -30px;
+  }
+  .row--references--tittle {
+    align-content: center;
+  }
+  .title {
+    max-width: 85vw;
+    padding: 30px;
+    font-size: 1.9em;
+  }
 }
